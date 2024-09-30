@@ -96,17 +96,17 @@ available_setting = {
     "wework_smart": True,  # 配置wework是否使用已登录的企业微信，False为多开
     # 语音设置
     "speech_recognition": True,  # 是否开启语音识别
-    "group_speech_recognition": False,  # 是否开启群组语音识别
-    "voice_reply_voice": False,  # 是否使用语音回复语音，需要设置对应语音合成引擎的api key
+    "group_speech_recognition": True,  # 是否开启群组语音识别
+    "voice_reply_voice": True,  # 是否使用语音回复语音，需要设置对应语音合成引擎的api key
     "always_reply_voice": False,  # 是否一直使用语音回复
-    "voice_to_text": "openai",  # 语音识别引擎，支持openai,baidu,google,azure,xunfei,ali
-    "text_to_voice": "openai",  # 语音合成引擎，支持openai,baidu,google,azure,xunfei,ali,pytts(offline),elevenlabs,edge(online)
+    "voice_to_text": "baidu",  # 语音识别引擎，支持openai,baidu,google,azure,xunfei,ali
+    "text_to_voice": "baidu",  # 语音合成引擎，支持openai,baidu,google,azure,xunfei,ali,pytts(offline),elevenlabs,edge(online)
     "text_to_voice_model": "tts-1",
     "tts_voice_id": "alloy",
     # baidu 语音api配置， 使用百度语音识别和语音合成时需要
-    "baidu_app_id": "",
-    "baidu_api_key": "",
-    "baidu_secret_key": "",
+    "baidu_app_id": "115744825",
+    "baidu_api_key": "RPiympnme2ckXSRKpgjeGZKk",
+    "baidu_secret_key": "H8KSqT4w0RwQO7FAacXBHWy2U7S0l1w7",
     # 1536普通话(支持简单的英文识别) 1737英语 1637粤语 1837四川话 1936普通话远场
     "baidu_dev_pid": 1536,
     # azure 语音api配置， 使用azure语音识别和语音合成时需要
@@ -122,8 +122,8 @@ available_setting = {
     # 翻译api
     "translate": "baidu",  # 翻译api，支持baidu
     # baidu翻译api的配置
-    "baidu_translate_app_id": "",  # 百度翻译api的appid
-    "baidu_translate_app_key": "",  # 百度翻译api的秘钥
+    "baidu_translate_app_id": "20220422001185817",  # 百度翻译api的appid
+    "baidu_translate_app_key": "XRX6v4UbBELEexDrOnzM",  # 百度翻译api的秘钥
     # itchat的配置
     "hot_reload": False,  # 是否开启热重载
     # wechaty的配置
