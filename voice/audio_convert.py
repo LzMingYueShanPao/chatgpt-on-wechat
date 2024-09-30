@@ -1,5 +1,9 @@
+import os
+import platform
 import shutil
 import wave
+
+import pydub
 
 from common.log import logger
 
@@ -28,17 +32,37 @@ def find_closest_sil_supports(sample_rate):
             mindiff = diff
     return closest
 
+def get_pcm_from_wav(audio_path):
+    # 从音频文件中读取 pcm 数据.
+    # :param audio_path: 音频文件路径，可以是 mp3 或 wav 格式
+    # :returns: pcm 数据
 
+    # 获取文件扩展名
+    file_extension = audio_path.split('.')[-1].lower()
+    if file_extension == 'wav':
+        # 读取 wav 文件
+        with wave.open(audio_path, "rb") as wav:
+            return wav.readframes(wav.getnframes())
+    elif file_extension == 'mp3':
+        # 读取 mp3 文件
+        if platform.system() == "Windows":
+            AudioSegment.ffmpeg = r'C:\workspace\应用程序\音视频处理软件\ffmpeg-7.0.2'
+        project_root = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+        audio_path = os.path.normpath(os.path.join(project_root, audio_path))
+        audio = pydub.AudioSegment.from_file(audio_path, format='mp3')
+        return audio.raw_data
+    else:
+        raise ValueError("Unsupported audio format. Please provide a .wav or .mp3 file.")
+
+"""
 def get_pcm_from_wav(wav_path):
-    """
-    从 wav 文件中读取 pcm
-
-    :param wav_path: wav 文件路径
-    :returns: pcm 数据
-    """
+    # 从 wav 文件中读取 pcm
+    # 
+    # :param wav_path: wav 文件路径
+    # :returns: pcm 数据
     wav = wave.open(wav_path, "rb")
     return wav.readframes(wav.getnframes())
-
+"""
 
 def any_to_mp3(any_path, mp3_path):
     """
