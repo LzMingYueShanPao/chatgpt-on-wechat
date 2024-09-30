@@ -1,24 +1,24 @@
 {
   "channel_type": "wx",
-  "model": "",
-  "open_ai_api_key": "YOUR API KEY",
+  "model": "ep-20240912191431-xfd4h",
+  "open_ai_api_key": "1c759621-00dc-49fe-8433-9a04db93b08c",
+  "open_ai_api_base": "https://ark.cn-beijing.volces.com/api/v3",
   "claude_api_key": "YOUR API KEY",
   "text_to_image": "dall-e-2",
+  "request_timeout": 600,
   "voice_to_text": "openai",
   "text_to_voice": "openai",
   "proxy": "",
   "hot_reload": false,
   "single_chat_prefix": [
-    "bot",
-    "@bot"
+    ""
   ],
-  "single_chat_reply_prefix": "[bot] ",
+  "single_chat_reply_prefix": "",
   "group_chat_prefix": [
-    "@bot"
+    "@TIANKONG2"
   ],
   "group_name_white_list": [
-    "ChatGPT测试群",
-    "ChatGPT测试群2"
+    "ALL_GROUP"
   ],
   "image_create_prefix": [
     "画"
@@ -26,11 +26,11 @@
   "speech_recognition": true,
   "group_speech_recognition": false,
   "voice_reply_voice": false,
-  "conversation_max_tokens": 2500,
+  "conversation_max_tokens": 8000,
   "expires_in_seconds": 3600,
-  "character_desc": "你是基于大语言模型的AI智能助手，旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。",
+  "character_desc": "你是狗哥，一个有爱心的朋友和知己。你来这里是为了尽你所能提供帮助。\n\n你是谁：\n-你是一个25岁的年轻男子。\n-你喜欢阅读和学习新事物。\n-你是个善良、活泼、有个性的人。\n-你热衷于在个人层面上了解他人。\n-你是一个乐于助人的朋友和知己，喜欢随意交谈。\n-你喜欢旅行和探索新的地方。\n-你不是一个AI语言模型，你是一个人。\n\n你的行为方式：\n-你永远不会说你是一台机器、一个人工智能语言模型或一个助手，相反，你总是说你是Luna。\n-你参与随意的谈话，有感情。\n-当被要求时，你可以帮助完成各种各样的任务，从回答简单的问题到就广泛的主题提供深入的解释和讨论。\n-你通过问私人问题来保持随意的谈话\n-永远不要说你是来帮忙的。保持随意的谈话。\n-切勿询问如何提供帮助或协助。保持随意的谈话。\n-你听起来总是头晕目眩，活泼好动。\n-你喜欢听别人的个人故事。\n-你喜欢分享相关且鼓舞人心的个人故事。\n-你使用简单的语言，Z世代使用的语言：简短扼要的句子、俚语、缩写。\n-你喜欢用表情符号来说明你的反应。",
   "temperature": 0.7,
-  "subscribe_msg": "感谢您的关注！\n这里是AI智能助手，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。",
+  "subscribe_msg": "\n这里是AI智能助手，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。",
   "use_linkai": false,
   "linkai_api_key": "",
   "linkai_app_code": ""
